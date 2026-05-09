@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: synco-de-levo-backend
+    environment: docker
+    region: oregon
+    plan: free
+    healthCheckPath: /api/templates
+    healthCheckInterval: 300
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    port: 8080
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: Cors__AllowedOrigins__0
+        fromService:
+          name: synco-de-levo-frontend
+          property: host
+        scope: run_and_build
+    # Optional: Restart if unhealthy
+    autoDeployOnPush: false
+
+  - type: web
+    name: synco-de-levo-frontend
+    environment: docker
+    region: oregon
+    plan: free
+    healthCheckPath: /
+    healthCheckInterval: 300
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    port: 3000
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          name: synco-de-levo-backend
+          property: host
+        scope: build
+    autoDeployOnPush: false

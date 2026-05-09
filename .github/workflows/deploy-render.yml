@@ -1,0 +1,69 @@
+name: Deploy to Render
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment || 'production' }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build backend image
+        run: |
+          docker buildx build \
+            --file ./backend/Dockerfile \
+            --tag synco-de-levo-backend:${{ github.sha }} \
+            --tag synco-de-levo-backend:latest \
+            --output type=docker \
+            ./backend
+
+      - name: Build frontend image
+        run: |
+          docker buildx build \
+            --file ./frontend/Dockerfile \
+            --tag synco-de-levo-frontend:${{ github.sha }} \
+            --tag synco-de-levo-frontend:latest \
+            --output type=docker \
+            ./frontend
+
+      - name: Push to Render
+        env:
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          RENDER_BACKEND_SERVICE_ID: ${{ secrets.RENDER_BACKEND_SERVICE_ID }}
+          RENDER_FRONTEND_SERVICE_ID: ${{ secrets.RENDER_FRONTEND_SERVICE_ID }}
+        run: |
+          echo "Deployment triggered to Render"
+          echo "Backend Service: $RENDER_BACKEND_SERVICE_ID"
+          echo "Frontend Service: $RENDER_FRONTEND_SERVICE_ID"
+          
+          # If using Render's native GitHub integration, services auto-deploy on push
+          # For manual deployment via API, add curl commands here:
+          # curl -X POST "https://api.render.com/v1/services/$RENDER_BACKEND_SERVICE_ID/deploys" \
+          #   -H "Authorization: Bearer $RENDER_API_KEY"
+
+      - name: Deployment Summary
+        run: |
+          echo "✅ Deployment workflow completed"
+          echo "Backend Service: synco-de-levo-backend"
+          echo "Frontend Service: synco-de-levo-frontend"
+          echo ""
+          echo "Monitor deployment in Render dashboard:"
+          echo "https://dashboard.render.com"

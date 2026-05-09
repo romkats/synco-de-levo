@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Build output
+bin/
+obj/
+
+# IDE
+.vs/
+.vscode/
+*.swp
+*.swo
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime
+*.log
+*.tmp
+
+# Dependencies (if any)
+packages/
