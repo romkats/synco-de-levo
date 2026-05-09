@@ -1,0 +1,69 @@
+{
+  "id": "endless-cellar",
+  "name": "Endless Cellar",
+  "description": "Weekly quest with 4 floors and a boss area at the end. Slots inherit between floors unless changed.",
+  "roles": [
+    { "id": "sniper", "label": "Sniper" },
+    { "id": "hp", "label": "HP" }
+  ],
+  "slots": {
+    "sniper": [
+      { "name": "bow", "default": { "name": "OAB" } },
+      { "name": "arrow", "default": { "name": "Steel Arrow" } },
+      { "name": "element", "default": { "name": "None" } },
+      { "name": "armor" },
+      { "name": "headgear" }
+    ],
+    "hp": [{ "name": "armor" }]
+  },
+  "levels": [
+    {
+      "id": 1,
+      "name": "Floor 1",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 2,
+      "name": "Floor 2",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 3,
+      "name": "Floor 3",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 4,
+      "name": "Floor 4 — Eddga",
+      "gear": {
+        "sniper": {
+          "bow": { "name": "MVP" },
+          "arrow": { "name": "Oridecon Arrow" },
+          "element": { "name": "Water", "color": "#008080" }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 5,
+      "name": "Floor 5",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": null
+        },
+        "hp": {}
+      }
+    }
+  ]
+}
