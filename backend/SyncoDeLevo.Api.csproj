@@ -5,10 +5,18 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>SyncoDeLevo.Api</RootNamespace>
+    <SpaRoot>..\frontend\</SpaRoot>
+    <SpaProxyServerUrl>http://localhost:5173</SpaProxyServerUrl>
+    <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Update="Data\templates\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Include frontend dist files in publish output -->
+    <Content Include="..\frontend\dist\**" CopyToPublishDirectory="PreserveNewest" LinkBase="wwwroot\" />
   </ItemGroup>
 
 </Project>

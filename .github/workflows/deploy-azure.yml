@@ -16,6 +16,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Frontend Build
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+          cache-dependency-path: "frontend/package-lock.json"
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: ./frontend
+        run: npm run build
+
       # Backend Build
       - name: Set up .NET
         uses: actions/setup-dotnet@v4
@@ -38,25 +54,13 @@ jobs:
         id: backend-artifact
         run: echo "path=backend/publish" >> $GITHUB_OUTPUT
 
-      # Frontend Build
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "npm"
-          cache-dependency-path: "frontend/package-lock.json"
-
-      - name: Install frontend dependencies
-        working-directory: ./frontend
-        run: npm ci
-
-      - name: Build frontend
-        working-directory: ./frontend
-        run: npm run build
-
-      # Upload artifacts
-      - name: Create backend deployment package
+      # Package with SPA
+      - name: Create backend deployment package with SPA
         run: |
+          # Copy frontend dist to backend wwwroot
+          mkdir -p backend/publish/wwwroot
+          cp -r frontend/dist/* backend/publish/wwwroot/
+          
           cd backend/publish
           zip -r ../../backend-deploy.zip .
           cd ../..
@@ -66,13 +70,6 @@ jobs:
         with:
           name: backend-deploy
           path: backend-deploy.zip
-          retention-days: 1
-
-      - name: Upload frontend artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: frontend-dist
-          path: frontend/dist
           retention-days: 1
 
   deploy:
@@ -88,14 +85,8 @@ jobs:
           name: backend-deploy
           path: .
 
-      - name: Download frontend artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: frontend-dist
-          path: frontend/dist
-
-      # Deploy Backend to Azure Web App
-      - name: Deploy backend to Azure Web App
+      # Deploy Backend with SPA to Azure Web App
+      - name: Deploy backend with SPA to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
@@ -105,22 +96,8 @@ jobs:
           clean: true
           restart: true
 
-      # Deploy Frontend to Azure Static Web App
-      - name: Deploy frontend to Azure Static Web App
-        id: deploy-frontend
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          action: "upload"
-          app_location: "./frontend/dist"
-          api_location: ""
-          output_location: "./frontend/dist"
-          skip_api_build: true
-
       - name: Deployment Summary
         run: |
           echo "✅ Deployment completed successfully!"
           echo ""
-          echo "Backend deployed to: ${{ secrets.AZURE_WEBAPP_NAME }}"
-          echo "Frontend deployment status: ${{ steps.deploy-frontend.outcome }}"
+          echo "Backend with SPA deployed to: ${{ secrets.AZURE_WEBAPP_NAME }}"

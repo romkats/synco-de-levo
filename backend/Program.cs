@@ -33,4 +33,11 @@ app.UseCors(CorsPolicy);
 app.MapControllers();
 app.MapHub<LevelHub>("/hubs/level");
 
+// Serve static files from wwwroot (where frontend dist is copied)
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+// Fallback to index.html for SPA routing
+app.MapFallbackToFile("index.html");
+
 app.Run();
