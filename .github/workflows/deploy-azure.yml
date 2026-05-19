@@ -55,11 +55,17 @@ jobs:
         run: npm run build
 
       # Upload artifacts
+      - name: Create backend deployment package
+        run: |
+          cd backend/publish
+          zip -r ../../backend-deploy.zip .
+          cd ../..
+
       - name: Upload backend artifact
         uses: actions/upload-artifact@v4
         with:
-          name: backend-publish
-          path: backend/publish
+          name: backend-deploy
+          path: backend-deploy.zip
           retention-days: 1
 
       - name: Upload frontend artifact
@@ -79,8 +85,8 @@ jobs:
       - name: Download backend artifact
         uses: actions/download-artifact@v4
         with:
-          name: backend-publish
-          path: backend/publish
+          name: backend-deploy
+          path: .
 
       - name: Download frontend artifact
         uses: actions/download-artifact@v4
@@ -94,11 +100,10 @@ jobs:
         with:
           app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ./backend/publish
+          package: ./backend-deploy.zip
           slot-name: production
           clean: true
           restart: true
-          type: zip
 
       # Deploy Frontend to Azure Static Web App
       - name: Deploy frontend to Azure Static Web App
