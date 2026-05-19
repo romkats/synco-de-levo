@@ -21,11 +21,8 @@ builder.Services.AddSingleton<ITemplateService, TemplateService>();
 builder.Services.AddHostedService<ScenarioCleanupService>();
 
 const string CorsPolicy = "frontend";
-var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() 
-    ?? new[] { "http://localhost:5173", "http://127.0.0.1:5173" };
-
 builder.Services.AddCors(o => o.AddPolicy(CorsPolicy, p =>
-    p.WithOrigins(allowedOrigins)
+    p.WithOrigins("http://localhost:5173", "http://127.0.0.1:5173")
      .AllowAnyHeader()
      .AllowAnyMethod()
      .AllowCredentials()));
