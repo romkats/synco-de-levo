@@ -383,7 +383,7 @@ input:focus { outline: none; border-color: var(--accent); }
 .builder-slot-mode label { display: inline-flex; gap: 3px; align-items: center; cursor: pointer; }
 .builder-slot-mode input[type="radio"] { width: auto; }
 .builder-slot-fields { display: grid; grid-template-columns: 1.4fr 1.2fr auto auto; gap: 4px; }
-.builder-slot-fields input[type="color"] { padding: 0; height: 32px; }
+.builder-slot-fields input[type="color"] { padding: 0; width: 32px; height: 32px; flex-shrink: 0; }
 .builder-slot-preview { font-size: 12px; }
 .muted { color: var(--muted); }
 

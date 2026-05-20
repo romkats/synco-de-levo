@@ -483,12 +483,15 @@ export default function CustomScenarioBuilder({
                           onChange={e => patchSlotDefault(i, { notes: e.target.value })}
                           placeholder="Notes"
                         />
-                        <input
-                          type="color"
-                          value={dv?.color ?? '#222831'}
-                          onChange={e => patchSlotDefault(i, { color: e.target.value })}
-                          aria-label="Default background color"
-                        />
+                        <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                          <input
+                            type="color"
+                            value={dv?.color ?? '#222831'}
+                            onChange={e => patchSlotDefault(i, { color: e.target.value })}
+                            aria-label="Default background color"
+                          />
+                          <span title="Color">🎨</span>
+                        </label>
                         <button
                           type="button"
                           onClick={() => clearSlotDefault(i)}
@@ -552,10 +555,13 @@ export default function CustomScenarioBuilder({
                         <label><input type="radio" name={`mode-${lvl.id}-${slot}`} checked={mode === 'clear'} onChange={() => setMode(idx, slot, 'clear', inheritedValue)} /> clear</label>
                       </div>
                       {mode === 'set' && (
-                        <div className="builder-slot-fields">
+                       <div className="builder-slot-fields">
                           <input value={editing?.name ?? ''} onChange={e => patchValue(idx, slot, { name: e.target.value })} placeholder="Item name" />
                           <input value={editing?.notes ?? ''} onChange={e => patchValue(idx, slot, { notes: e.target.value })} placeholder="Notes" />
-                          <input type="color" value={editing?.color ?? '#222831'} onChange={e => patchValue(idx, slot, { color: e.target.value })} aria-label="Background color" />
+                          <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                            <input type="color" value={editing?.color ?? '#222831'} onChange={e => patchValue(idx, slot, { color: e.target.value })} aria-label="Background color" />
+                            <span title="Color">🎨</span>
+                          </label>
                         </div>
                       )}
                       {mode === 'inherit' && (
