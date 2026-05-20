@@ -3,18 +3,39 @@
   "name": "Endless Cellar",
   "description": "Weekly quest with 4 floors and a boss area at the end. Slots inherit between floors unless changed.",
   "roles": [
-    { "id": "sniper", "label": "Sniper" },
-    { "id": "hp", "label": "HP" }
+    {
+      "id": "sniper",
+      "label": "Sniper"
+    },
+    {
+      "id": "hp",
+      "label": "HP"
+    }
   ],
   "slots": {
     "sniper": [
-      { "name": "bow", "default": { "name": "OAB" } },
-      { "name": "arrow", "default": { "name": "Steel Arrow" } },
-      { "name": "element", "default": { "name": "None" } },
-      { "name": "armor" },
-      { "name": "headgear" }
+      {
+        "name": "bow",
+        "default": {
+          "name": "OAB"
+        }
+      },
+      {
+        "name": "arrow",
+        "default": {
+          "name": "Steel Arrow"
+        }
+      },
+      {
+        "name": "element",
+        "default": {
+          "name": "Neutral"
+        }
+      },
+      "armor",
+      "headgear"
     ],
-    "hp": [{ "name": "armor" }]
+    "hp": ["armor"]
   },
   "levels": [
     {
@@ -46,9 +67,16 @@
       "name": "Floor 4 — Eddga",
       "gear": {
         "sniper": {
-          "bow": { "name": "MVP" },
-          "arrow": { "name": "Oridecon Arrow" },
-          "element": { "name": "Water", "color": "#008080" }
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Water",
+            "color": "#48ecf2"
+          }
         },
         "hp": {}
       }
@@ -60,7 +88,962 @@
         "sniper": {
           "bow": null,
           "arrow": null,
+          "element": {
+            "name": "Wind",
+            "color": "#11c6b1"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 6,
+      "name": "Level 6",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 7,
+      "name": "Level 7",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 8,
+      "name": "Level 8 - Garm",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "armor": {
+            "name": "Unfrozen"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 9,
+      "name": "Level 9",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": null,
+          "armor": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 10,
+      "name": "Level 10",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 11,
+      "name": "Level 11",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 12,
+      "name": "Level 12 - Tao Gunka",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 13,
+      "name": "Level 13",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 14,
+      "name": "Level 14",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 15,
+      "name": "Level 15",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 16,
+      "name": "Level 16 - Stormy Knight",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP box"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Earth",
+            "color": "#995e01"
+          },
+          "armor": {
+            "name": "Unfrozen"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 17,
+      "name": "Level 17",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": null,
+          "armor": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 18,
+      "name": "Level 18",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 19,
+      "name": "Level 19",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 20,
+      "name": "Level 20 - Dracula",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Holy",
+            "color": "#fcfcfc"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 21,
+      "name": "Level 21",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
           "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 22,
+      "name": "Level 22",
+      "gear": {
+        "sniper": {
+          "element": {
+            "name": "Wind",
+            "color": "#11c6b1"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 23,
+      "name": "Level 23",
+      "gear": {
+        "sniper": {
+          "element": {
+            "name": "Fire",
+            "color": "#c92606"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 24,
+      "name": "Level 24 - Gopinich",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 25,
+      "name": "Level 25",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": {
+            "name": "Water",
+            "color": "#48ecf2"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 26,
+      "name": "Level 26",
+      "gear": {
+        "sniper": {
+          "element": {
+            "name": "Holy",
+            "color": "#fcfcfc"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 27,
+      "name": "Level 27",
+      "gear": {
+        "sniper": {
+          "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 28,
+      "name": "Level 28 - Lady Tanee",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Earth",
+            "color": "#995e01"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 29,
+      "name": "Level 29",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 30,
+      "name": "Level 30",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 31,
+      "name": "Level 31",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 32,
+      "name": "Level 32 - RSX-0806",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 33,
+      "name": "Level 33",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 34,
+      "name": "Level 34",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 35,
+      "name": "Level 35",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 36,
+      "name": "Level 36 - Lord of Death",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Holy",
+            "color": "#fcfcfc"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 37,
+      "name": "Level 37",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": {
+            "name": "Fire",
+            "color": "#c92606"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 38,
+      "name": "Level 38",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 39,
+      "name": "Level 39",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 40,
+      "name": "Level 40",
+      "gear": {
+        "sniper": {
+          "element": {
+            "name": "Water",
+            "color": "#48ecf2"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 41,
+      "name": "Level 41",
+      "gear": {
+        "sniper": {
+          "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 42,
+      "name": "Level 42",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 43,
+      "name": "Level 43",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 44,
+      "name": "Level 44 - Detale",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "Dragon wing",
+            "notes": "or MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Holy",
+            "color": "#fcfcfc"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 45,
+      "name": "Level 45",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 46,
+      "name": "Level 46",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 47,
+      "name": "Level 47",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 48,
+      "name": "Level 48 - Kiel-D01",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 49,
+      "name": "Level 49",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 50,
+      "name": "Level 50",
+      "gear": {
+        "sniper": {
+          "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 51,
+      "name": "Level 51",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 52,
+      "name": "Level 52 - Gloom under night",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Immaterial Arrow"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 53,
+      "name": "Level 53",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": {
+            "name": "Holy",
+            "color": "#fcfcfc"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 54,
+      "name": "Level 54",
+      "gear": {
+        "sniper": {
+          "element": {
+            "name": "Wind",
+            "color": "#11c6b1"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 55,
+      "name": "Level 55",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 56,
+      "name": "Level 56 - Ktullanux",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Wind",
+            "color": "#11c6b1"
+          },
+          "armor": {
+            "name": "Unfrozen"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 57,
+      "name": "Level 57 - Vesper",
+      "gear": {
+        "sniper": {
+          "element": {
+            "name": "Shadow"
+          },
+          "armor": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 58,
+      "name": "Level 58 - Poring minibosses",
+      "gear": {
+        "sniper": {
+          "arrow": {
+            "name": "Immaterial Arrow"
+          },
+          "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 59,
+      "name": "Level 59 - Thanatos mobs (FA)",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 60,
+      "name": "Level 60 - Memory of Thanatos",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 61,
+      "name": "Level 61",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": {
+            "name": "Fire",
+            "color": "#c92606"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 62,
+      "name": "Level 62",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 63,
+      "name": "Level 63",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 64,
+      "name": "Level 64 - Tendrillion x2",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "armor": {
+            "name": "Pasana"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 65,
+      "name": "Level 65",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "armor": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 66,
+      "name": "Level 66",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 67,
+      "name": "Level 67",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 68,
+      "name": "Level 68 - Mammoth x2",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "armor": {
+            "name": "Pasana"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 69,
+      "name": "Level 69",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "armor": null,
+          "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 70,
+      "name": "Level 70",
+      "gear": {
+        "sniper": {
+          "element": {
+            "name": "Fire",
+            "color": "#c92606"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 71,
+      "name": "Level 71",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 72,
+      "name": "Level 72 - Nidhoggr's Shadow",
+      "gear": {
+        "sniper": {
+          "headgear": {
+            "name": "Insomniac"
+          },
+          "bow": {
+            "name": "Dragon Wing",
+            "notes": "or MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Holy",
+            "color": "#fcfcfc"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 73,
+      "name": "Level 73",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "BG bow",
+            "notes": "or MVP bow"
+          },
+          "element": null,
+          "headgear": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 74,
+      "name": "Level 74 - Bio 3 (FA)",
+      "gear": {
+        "sniper": {
+          "arrow": {
+            "name": "Immaterial Arrow"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 75,
+      "name": "Level 75 - DG monsters",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Holy",
+            "color": "#fcfcfc"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 76,
+      "name": "Level 76 - Wounded Satan Morroc",
+      "gear": {
+        "sniper": {},
+        "hp": {}
+      }
+    },
+    {
+      "id": 77,
+      "name": "Level 77 - !!!!! DO NOT KILL THE PORING !!!!!",
+      "gear": {
+        "sniper": {
+          "bow": null,
+          "arrow": null,
+          "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 78,
+      "name": "Kathryne",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "BG bow",
+            "notes": "or MVP bow"
+          },
+          "arrow": {
+            "name": "Immaterial Arrow"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 79,
+      "name": "Super Baphomet",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Holy",
+            "color": "#fcfcfc"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 80,
+      "name": "Wish Maiden x2",
+      "gear": {
+        "sniper": {
+          "arrow": {
+            "name": "Immaterial Arrow"
+          },
+          "element": null
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 81,
+      "name": "Piamette",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "BG bow",
+            "notes": "or MVP bow"
+          },
+          "arrow": {
+            "name": "Oridecon Arrow"
+          },
+          "element": {
+            "name": "Fire",
+            "color": "#c92606"
+          },
+          "armor": {
+            "name": "Pasana"
+          }
+        },
+        "hp": {}
+      }
+    },
+    {
+      "id": 82,
+      "name": "Pori Pori",
+      "gear": {
+        "sniper": {
+          "bow": {
+            "name": "MVP bow",
+            "notes": "or Pori Pori bow"
+          }
         },
         "hp": {}
       }
