@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { QRCodeSVG } from 'qrcode.react';
 import { startTransfer } from '../api/scenarios';
 
 type Props = { scenarioId: string; leaderToken: string };
@@ -8,6 +9,7 @@ export default function ShareBar({ scenarioId, leaderToken }: Props) {
   const [transferUrl, setTransferUrl] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState<string | null>(null);
+  const [qrCodeExpanded, setQrCodeExpanded] = useState(false);
 
   async function copy(text: string, label: string) {
     try {
@@ -54,7 +56,23 @@ export default function ShareBar({ scenarioId, leaderToken }: Props) {
         )}
       </div>
       {transferUrl && (
-        <p className="share-hint">Send this link to a teammate. When they accept, you become a member.</p>
+        <>
+          <div className="qr-code-section">
+            <button
+              className="qr-toggle-btn"
+              onClick={() => setQrCodeExpanded(!qrCodeExpanded)}
+              aria-expanded={qrCodeExpanded}
+            >
+              {qrCodeExpanded ? '▼ Hide QR Code' : '▶ Show QR Code'}
+            </button>
+            {qrCodeExpanded && (
+              <div className="qr-code-container">
+                <QRCodeSVG value={transferUrl} size={200} level="H" includeMargin={true} />
+              </div>
+            )}
+          </div>
+          <p className="share-hint">Send this link to a teammate. When they accept, you become a member.</p>
+        </>
       )}
     </div>
   );

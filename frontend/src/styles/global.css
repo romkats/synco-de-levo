@@ -147,6 +147,39 @@ input:focus { outline: none; border-color: var(--accent); }
 .share-row input { flex: 1; font-family: monospace; font-size: 12px; }
 .share-hint { color: var(--muted); font-size: 12px; margin: 0; }
 
+.qr-code-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.qr-toggle-btn {
+  align-self: flex-start;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.qr-toggle-btn:hover:not(:disabled) {
+  background: #2a2f3a;
+  border-color: #3b4252;
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background: var(--panel);
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.qr-code-container canvas {
+  display: block;
+}
+
 .member-hint {
   color: var(--muted);
   font-size: 14px;
