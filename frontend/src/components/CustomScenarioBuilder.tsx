@@ -451,7 +451,7 @@ export default function CustomScenarioBuilder({
               const open = !!defaultsOpen[key];
               const dv = def.default ?? null;
               return (
-                <li key={`${def.name}-${i}`} className="builder-slot-def">
+                <li key={i} className="builder-slot-def">
                   <div className="builder-slot-def-row">
                     <input
                       value={def.name}
