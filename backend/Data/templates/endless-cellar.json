@@ -4,1048 +4,2503 @@
   "description": "Weekly quest with 4 floors and a boss area at the end. Slots inherit between floors unless changed.",
   "roles": [
     {
+      "id": "sb",
+      "label": "SB"
+    },
+    {
+      "id": "pala",
+      "label": "Pala"
+    },
+    {
+      "id": "dancer",
+      "label": "Dancer"
+    },
+    {
+      "id": "clown",
+      "label": "Clown"
+    },
+    {
+      "id": "priest",
+      "label": "HP"
+    },
+    {
+      "id": "wizard",
+      "label": "HW"
+    },
+    {
+      "id": "professor",
+      "label": "Professor"
+    },
+    {
       "id": "sniper",
       "label": "Sniper"
     },
     {
-      "id": "hp",
-      "label": "HP"
+      "id": "creo",
+      "label": "Creo"
     }
   ],
   "slots": {
+    "sb": [
+      {
+        "name": "Action",
+        "default": {
+          "name": "Gather Mobs"
+        }
+      },
+      {
+        "name": "Armour",
+        "default": {
+          "name": "Any"
+        }
+      },
+      {
+        "name": "Consumables",
+        "default": {
+          "name": "HP Regen"
+        }
+      }
+    ],
+    "pala": [
+      {
+        "name": "Action",
+        "default": {
+          "name": "Gather Mobs (Provoke), Devo SB, Gospel Before portal To Next Level"
+        }
+      },
+      {
+        "name": "Armour",
+        "default": {
+          "name": "Any"
+        }
+      },
+      {
+        "name": "Consumables",
+        "default": {
+          "name": "HP Regen"
+        }
+      }
+    ],
+    "dancer": [
+      {
+        "name": "Action",
+        "default": {
+          "name": "SP + Crit Songs"
+        }
+      },
+      {
+        "name": "Armour",
+        "default": {
+          "name": "Any"
+        }
+      },
+      "Consumables"
+    ],
+    "clown": [
+      {
+        "name": "Action 1",
+        "default": {
+          "name": "Bragi"
+        }
+      },
+      "Action 2",
+      {
+        "name": "Armour",
+        "default": {
+          "name": "Armour"
+        }
+      },
+      "Consumables"
+    ],
+    "priest": [
+      {
+        "name": "Action 1",
+        "default": {
+          "name": "Buff (ABU) + Heal + Res"
+        }
+      },
+      "Action 2",
+      "Action 3",
+      "Action 4",
+      "Action 5",
+      "Action 6",
+      {
+        "name": "Armour",
+        "default": {
+          "name": "Any"
+        }
+      },
+      "Consumables"
+    ],
+    "wizard": [
+      {
+        "name": "Action",
+        "default": {
+          "name": "AOE Spamm"
+        }
+      },
+      {
+        "name": "Armour",
+        "default": {
+          "name": "Any"
+        }
+      },
+      "Consumables"
+    ],
+    "professor": [
+      {
+        "name": "Action 1",
+        "default": {
+          "name": "SP Snipers A lot and Others Occasionally"
+        }
+      },
+      "Action 2",
+      "Action 3",
+      {
+        "name": "Armour",
+        "default": {
+          "name": "Any"
+        }
+      },
+      {
+        "name": "Consumables",
+        "default": {
+          "name": "Grape"
+        }
+      }
+    ],
     "sniper": [
       {
-        "name": "bow",
+        "name": "Bow And Element",
         "default": {
-          "name": "OAB"
+          "name": "OAB/Elven + Any Element"
         }
       },
       {
-        "name": "arrow",
+        "name": "Armour",
         "default": {
-          "name": "Steel Arrow"
+          "name": "Porcellio"
         }
       },
       {
-        "name": "element",
+        "name": "Garment",
         "default": {
-          "name": "Neutral"
+          "name": "Nyd with raydric"
         }
       },
-      "armor",
-      "headgear"
+      {
+        "name": "Action 1",
+        "default": {
+          "name": "Sharpshoot"
+        }
+      },
+      "Action 2",
+      "Consumables"
     ],
-    "hp": ["armor"]
+    "creo": [
+      {
+        "name": "Action 1",
+        "default": {
+          "name": "Stay Back Kill stray mobs"
+        }
+      },
+      "Action 2",
+      "Consumables"
+    ]
   },
   "levels": [
     {
-      "id": 1,
-      "name": "Floor 1",
-      "gear": {
-        "sniper": {},
-        "hp": {}
-      }
-    },
-    {
       "id": 2,
-      "name": "Floor 2",
+      "name": "Level 1",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 3,
-      "name": "Floor 3",
+      "name": "Level 2",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 4,
-      "name": "Floor 4 — Eddga",
+      "name": "Level 3",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Water",
-            "color": "#48ecf2"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 5,
-      "name": "Floor 5",
+      "name": "Level 4 - Eddga",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": {
-            "name": "Wind",
-            "color": "#11c6b1"
+          "Bow And Element": {
+            "name": "MVP + Water"
           }
         },
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 6,
-      "name": "Level 6",
+      "name": "Level 5",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 7,
-      "name": "Level 7",
+      "name": "Level 6",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 8,
-      "name": "Level 8 - Garm",
+      "name": "Level 7",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "armor": {
-            "name": "Unfrozen"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 9,
-      "name": "Level 9",
+      "name": "Level 8 - Hatii",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": null,
-          "armor": null
+        "sb": {
+          "Armour": {
+            "name": "Marc"
+          }
         },
-        "hp": {}
+        "pala": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "dancer": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "clown": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "priest": {
+          "Armour": {
+            "name": "Marc"
+          },
+          "Action 2": {
+            "name": "Status Recovery",
+            "notes": "Some people might get frozen"
+          }
+        },
+        "wizard": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "professor": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "sniper": {
+          "Armour": {
+            "name": "Marc"
+          },
+          "Bow And Element": {
+            "name": "MVP + Wind"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 10,
-      "name": "Level 10",
+      "name": "Level 9",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {
+          "Armour": null
+        },
+        "pala": {
+          "Armour": null
+        },
+        "dancer": {
+          "Armour": null
+        },
+        "clown": {
+          "Armour": null
+        },
+        "priest": {
+          "Armour": null,
+          "Action 2": null
+        },
+        "wizard": {
+          "Armour": null
+        },
+        "professor": {
+          "Armour": null
+        },
+        "sniper": {
+          "Armour": null,
+          "Bow And Element": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 11,
-      "name": "Level 11",
+      "name": "Level 10",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 12,
-      "name": "Level 12 - Tao Gunka",
+      "name": "Level 11",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 13,
-      "name": "Level 13",
+      "name": "Level 12 - Tao Gunka",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null
+        "sb": {
+          "Armour": {
+            "name": "Cornotus",
+            "notes": "Anti Armor Break"
+          }
         },
-        "hp": {}
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP Bow + Any"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 14,
-      "name": "Level 14",
+      "name": "Level 13",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {
+          "Armour": null
+        },
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 15,
-      "name": "Level 15",
+      "name": "Level 14",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 16,
-      "name": "Level 16 - Stormy Knight",
+      "name": "Level 15",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP box"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Earth",
-            "color": "#995e01"
-          },
-          "armor": {
-            "name": "Unfrozen"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 17,
-      "name": "Level 17",
+      "name": "Level 16 - Stormy Knight",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": null,
-          "armor": null
+        "sb": {
+          "Armour": {
+            "name": "Marc"
+          }
         },
-        "hp": {}
+        "pala": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "dancer": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "clown": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "priest": {
+          "Armour": {
+            "name": "Marc"
+          },
+          "Action 2": {
+            "name": "Status Recovery",
+            "notes": "Some People Might Get Frozen"
+          }
+        },
+        "wizard": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "professor": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "sniper": {
+          "Armour": {
+            "name": "Marc"
+          },
+          "Bow And Element": {
+            "name": "MVP Bow + Stone"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 18,
-      "name": "Level 18",
+      "name": "Level 17",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {
+          "Armour": null
+        },
+        "pala": {
+          "Armour": null
+        },
+        "dancer": {
+          "Armour": null
+        },
+        "clown": {
+          "Armour": null
+        },
+        "priest": {
+          "Armour": null,
+          "Action 2": null
+        },
+        "wizard": {
+          "Armour": null
+        },
+        "professor": {
+          "Armour": null
+        },
+        "sniper": {
+          "Bow And Element": null,
+          "Armour": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 19,
-      "name": "Level 19",
+      "name": "Level 18",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 20,
-      "name": "Level 20 - Dracula",
+      "name": "Level 19",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Holy",
-            "color": "#fcfcfc"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 21,
-      "name": "Level 21",
+      "name": "Level 20 - Dracula",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": null
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Consumables": {
+            "name": "Green Potion/Panacea",
+            "notes": "Against Silence"
+          },
+          "Action 2": {
+            "name": "Aspersio On DPS",
+            "notes": ""
+          },
+          "Action 3": {
+            "name": "Pneuma On Party"
+          }
         },
-        "hp": {}
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": {
+            "name": "Any Bow ask for Aspersio"
+          },
+          "Consumables": {
+            "name": "Green Potion/Panacea",
+            "notes": "Against silence"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 22,
-      "name": "Level 22",
+      "name": "Level 21",
       "gear": {
-        "sniper": {
-          "element": {
-            "name": "Wind",
-            "color": "#11c6b1"
-          }
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Armour": null,
+          "Consumables": null,
+          "Action 1": null,
+          "Action 2": null,
+          "Action 3": null
         },
-        "hp": {}
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": null,
+          "Consumables": null,
+          "Action 1": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 23,
-      "name": "Level 23",
+      "name": "Level 22",
       "gear": {
-        "sniper": {
-          "element": {
-            "name": "Fire",
-            "color": "#c92606"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 24,
-      "name": "Level 24 - Gopinich",
+      "name": "Level 23",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 25,
-      "name": "Level 25",
+      "name": "Level 24 - Gopinich",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": {
-            "name": "Water",
-            "color": "#48ecf2"
+          "Bow And Element": {
+            "name": "MVP+Fire"
           }
         },
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 26,
-      "name": "Level 26",
+      "name": "Level 25",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {
-          "element": {
-            "name": "Holy",
-            "color": "#fcfcfc"
-          }
+          "Bow And Element": null
         },
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 27,
-      "name": "Level 27",
+      "name": "Level 26",
       "gear": {
-        "sniper": {
-          "element": null
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 28,
-      "name": "Level 28 - Lady Tanee",
+      "name": "Level 27",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Earth",
-            "color": "#995e01"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 29,
-      "name": "Level 29",
+      "name": "Level 28 - Lady Tanee",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": null
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {
+          "Action 2": {
+            "name": "Land Protector On Biscojin",
+            "notes": "To Remove Sanctuary"
+          }
         },
-        "hp": {}
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP + Earth"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 30,
-      "name": "Level 30",
+      "name": "Level 29",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {
+          "Action 1": null,
+          "Action 2": null
+        },
+        "sniper": {
+          "Bow And Element": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 31,
-      "name": "Level 31",
+      "name": "Level 30",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 32,
-      "name": "Level 32 - RSX-0806",
+      "name": "Level 31",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 33,
-      "name": "Level 33",
+      "name": "Level 32 - RSX 0806",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null
+        "sb": {
+          "Consumables": {
+            "name": "HP Regen + Mercenary",
+            "notes": "RSX Will EQ if not killed fast enough"
+          }
         },
-        "hp": {}
+        "pala": {
+          "Consumables": {
+            "name": "HP Regen + Mercenary",
+            "notes": "RSX Will EQ if not killed fast enough"
+          }
+        },
+        "dancer": {
+          "Consumables": {
+            "name": "Mercenary",
+            "notes": "RSX Will EQ if not killed fast enough"
+          }
+        },
+        "clown": {
+          "Consumables": {
+            "name": "Mercenary",
+            "notes": "RSX Will EQ if not killed fast enough"
+          },
+          "Action 1": {
+            "name": "Bragi + Apple + Drum"
+          }
+        },
+        "priest": {
+          "Consumables": {
+            "name": "Mercenary",
+            "notes": "RSX Will EQ if not killed fast enough"
+          }
+        },
+        "wizard": {
+          "Consumables": {
+            "name": "Mercenary",
+            "notes": "RSX Will EQ if not killed fast enough"
+          }
+        },
+        "professor": {
+          "Consumables": {
+            "name": "Grape + Mercenaries",
+            "notes": "RSX Will EQ if not killed fast enough"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP + Any"
+          },
+          "Consumables": {
+            "name": "Mercenary",
+            "notes": "RSX Will EQ if not killed fast enough"
+          }
+        },
+        "creo": {
+          "Consumables": {
+            "name": "Mercenary",
+            "notes": "RSX Will EQ if not killed fast enough"
+          },
+          "Action 1": {
+            "name": "Stand Next To Team to Absorb EQ"
+          },
+          "Action 2": {
+            "name": "Weapon Or Full Chemical Protection on SB"
+          }
+        }
       }
     },
     {
       "id": 34,
-      "name": "Level 34",
+      "name": "Level 33",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {
+          "Consumables": null
+        },
+        "pala": {
+          "Consumables": null
+        },
+        "dancer": {
+          "Consumables": null
+        },
+        "clown": {
+          "Consumables": null,
+          "Action 1": null
+        },
+        "priest": {
+          "Consumables": null
+        },
+        "wizard": {
+          "Consumables": null
+        },
+        "professor": {
+          "Consumables": null
+        },
+        "sniper": {
+          "Bow And Element": null,
+          "Consumables": null
+        },
+        "creo": {
+          "Consumables": null,
+          "Action 1": null,
+          "Action 2": null
+        }
       }
     },
     {
       "id": 35,
-      "name": "Level 35",
+      "name": "Level 34",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 36,
-      "name": "Level 36 - Lord of Death",
+      "name": "Level 35",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Holy",
-            "color": "#fcfcfc"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 37,
-      "name": "Level 37",
+      "name": "Level 36 - Lord Of Death",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": {
-            "name": "Fire",
-            "color": "#c92606"
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Action 2": {
+            "name": "Aspersio DPS"
+          },
+          "Action 3": {
+            "name": "Pneuma On Party"
           }
         },
-        "hp": {}
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": {
+            "name": "Any Bow Ask For Aspersio"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 38,
-      "name": "Level 38",
+      "name": "Level 37",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Action 2": null,
+          "Action 3": null
+        },
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 39,
-      "name": "Level 39",
+      "name": "Level 38",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 40,
-      "name": "Level 40",
+      "name": "Level 39",
       "gear": {
-        "sniper": {
-          "element": {
-            "name": "Water",
-            "color": "#48ecf2"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 41,
-      "name": "Level 41",
+      "name": "Level 40 - Imps",
       "gear": {
-        "sniper": {
-          "element": null
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 42,
-      "name": "Level 42",
+      "name": "Level 41",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 43,
-      "name": "Level 43",
+      "name": "Level 42",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 44,
-      "name": "Level 44 - Detale",
+      "name": "Level 43",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "Dragon wing",
-            "notes": "or MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Holy",
-            "color": "#fcfcfc"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 45,
-      "name": "Level 45",
+      "name": "Level 44 - Detale",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null
+        "sb": {
+          "Action": {
+            "name": "Gather MVP To Wall facing Away From Team"
+          }
         },
-        "hp": {}
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Action 2": {
+            "name": "Aspersio On DPS"
+          }
+        },
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": {
+            "name": "Any Bow Ask For Aspersio"
+          }
+        },
+        "creo": {
+          "Action 2": {
+            "name": "Full Chemical Protection On SB"
+          }
+        }
       }
     },
     {
       "id": 46,
-      "name": "Level 46",
+      "name": "Level 45",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {
+          "Action": null
+        },
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Action 2": null
+        },
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": null
+        },
+        "creo": {
+          "Action 2": null
+        }
       }
     },
     {
       "id": 47,
-      "name": "Level 47",
+      "name": "Level 46",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 48,
-      "name": "Level 48 - Kiel-D01",
+      "name": "Level 47",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 49,
-      "name": "Level 49",
+      "name": "Level 48 - Kiel",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Action 2": {
+            "name": "Aspersio DPS"
+          }
         },
-        "hp": {}
+        "wizard": {},
+        "professor": {
+          "Action 2": {
+            "name": "Land Protector On MVP Next To Wall"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "Any Bow Ask For Aspersio"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 50,
-      "name": "Level 50",
+      "name": "Level 49",
       "gear": {
-        "sniper": {
-          "element": null
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Action 2": null
         },
-        "hp": {}
+        "wizard": {},
+        "professor": {
+          "Action 2": null
+        },
+        "sniper": {
+          "Bow And Element": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 51,
-      "name": "Level 51",
+      "name": "Level 50",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 52,
-      "name": "Level 52 - Gloom under night",
+      "name": "Level 51",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Immaterial Arrow"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 53,
-      "name": "Level 53",
+      "name": "Level 52 - Gloom",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": {
-            "name": "Holy",
-            "color": "#fcfcfc"
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {
+          "Action 2": {
+            "name": "Land Protector On MVP When Next To Wall"
           }
         },
-        "hp": {}
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP + Immaterial"
+          },
+          "Action 1": {
+            "name": "Sharpshoot small slaves down first with Normal Arrows, Then MVP with Immaterial"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 54,
-      "name": "Level 54",
+      "name": "Level 53",
       "gear": {
-        "sniper": {
-          "element": {
-            "name": "Wind",
-            "color": "#11c6b1"
-          }
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {
+          "Action 2": null
         },
-        "hp": {}
+        "sniper": {
+          "Bow And Element": null,
+          "Action 1": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 55,
-      "name": "Level 55",
+      "name": "Level 54",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 56,
-      "name": "Level 56 - Ktullanux",
+      "name": "Level 55",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Wind",
-            "color": "#11c6b1"
-          },
-          "armor": {
-            "name": "Unfrozen"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 57,
-      "name": "Level 57 - Vesper",
+      "name": "Level 56 - Ktulannux",
       "gear": {
-        "sniper": {
-          "element": {
-            "name": "Shadow"
+        "sb": {
+          "Action": {
+            "name": "Gather MVP next to wall"
           },
-          "armor": null
+          "Armour": {
+            "name": "Marc"
+          }
         },
-        "hp": {}
+        "pala": {
+          "Action": {
+            "name": "Devo Spamm SB",
+            "notes": "MVP can dispel"
+          },
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "dancer": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "clown": {
+          "Armour": {
+            "name": "Marc"
+          },
+          "Action 1": {
+            "name": "Bragi + Battle Drums"
+          }
+        },
+        "priest": {
+          "Action 2": {
+            "name": "Safety Wall SB next to Wall"
+          },
+          "Action 3": {
+            "name": "Reassumptio SB",
+            "notes": "Ktulanux can dispel"
+          }
+        },
+        "wizard": {
+          "Action": {
+            "name": "Safety Wall SB next to Wall"
+          },
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "professor": {
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP + Wind"
+          },
+          "Armour": {
+            "name": "Marc"
+          },
+          "Action 2": {
+            "name": "Set traps between MVP and Team, Closer To MVP"
+          },
+          "Action 1": {
+            "name": "Sharpshoot / When MVP moves stop attacking let SB reagro",
+            "notes": ""
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 58,
-      "name": "Level 58 - Poring minibosses",
+      "name": "Level 57",
       "gear": {
-        "sniper": {
-          "arrow": {
-            "name": "Immaterial Arrow"
-          },
-          "element": null
+        "sb": {
+          "Armour": null,
+          "Action": null
         },
-        "hp": {}
+        "pala": {
+          "Action": null,
+          "Armour": null
+        },
+        "dancer": {
+          "Armour": null
+        },
+        "clown": {
+          "Armour": null,
+          "Action 1": null
+        },
+        "priest": {
+          "Action 3": null,
+          "Action 2": null,
+          "Action 1": null,
+          "Armour": {
+            "name": "Marc"
+          }
+        },
+        "wizard": {
+          "Armour": null,
+          "Action": null,
+          "Consumables": null
+        },
+        "professor": {
+          "Armour": null
+        },
+        "sniper": {
+          "Armour": null,
+          "Bow And Element": null,
+          "Garment": null,
+          "Action 2": null,
+          "Action 1": null,
+          "Consumables": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 59,
-      "name": "Level 59 - Thanatos mobs (FA)",
+      "name": "Level 58",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {
+          "Armour": null
+        },
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 60,
-      "name": "Level 60 - Memory of Thanatos",
+      "name": "Level 59",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 61,
-      "name": "Level 61",
+      "name": "Level 60 - Thanatos Phantom",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": {
-            "name": "Fire",
-            "color": "#c92606"
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {
+          "Action 2": {
+            "name": "Land Protector on MVP when walled"
           }
         },
-        "hp": {}
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP + Immaterial"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 62,
-      "name": "Level 62",
+      "name": "Level 61",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {
+          "Action 2": null
+        },
+        "sniper": {
+          "Bow And Element": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 63,
-      "name": "Level 63",
+      "name": "Level 62",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 64,
-      "name": "Level 64 - Tendrillion x2",
+      "name": "Level 63",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "armor": {
-            "name": "Pasana"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 65,
-      "name": "Level 65",
+      "name": "Level 64 - Tendrilion x 2",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "armor": null
+        "sb": {},
+        "pala": {},
+        "dancer": {
+          "Action": {
+            "name": "Songs Off For Volcano then SP + Crit Song"
+          }
         },
-        "hp": {}
+        "clown": {
+          "Action 1": {
+            "name": "Songs Off For Volcano then Bragi + Battle Drum"
+          }
+        },
+        "priest": {},
+        "wizard": {},
+        "professor": {
+          "Action 2": {
+            "name": "Volcano On Snipers"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP + Fire"
+          },
+          "Action 1": {
+            "name": "Sharpshoot / When MVP moves stop attacking let SB reagro"
+          },
+          "Action 2": {
+            "name": "Trap Between Team And MVP, Closer to MVP"
+          },
+          "Armour": {
+            "name": "Pasana"
+          }
+        },
+        "creo": {}
       }
     },
     {
       "id": 66,
-      "name": "Level 66",
+      "name": "Level 65",
       "gear": {
-        "sniper": {},
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {
+          "Action": null
+        },
+        "clown": {
+          "Armour": null,
+          "Consumables": null,
+          "Action 1": null
+        },
+        "priest": {},
+        "wizard": {},
+        "professor": {
+          "Action 2": null
+        },
+        "sniper": {
+          "Bow And Element": null,
+          "Consumables": null,
+          "Action 2": null,
+          "Action 1": null,
+          "Garment": null,
+          "Armour": null
+        },
+        "creo": {}
       }
     },
     {
       "id": 67,
-      "name": "Level 67",
+      "name": "Level 66",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 68,
-      "name": "Level 68 - Mammoth x2",
+      "name": "Level 67",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "armor": {
-            "name": "Pasana"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 69,
-      "name": "Level 69",
+      "name": "Level 68 - Mamoth x 2",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "armor": null,
-          "element": null
+        "sb": {
+          "Consumables": {
+            "name": "HP Regen + Mercenary"
+          },
+          "Action": {
+            "name": "Aggro MVP so that it is in between you and team",
+            "notes": "this way HP and pneuma you and it is easier to get whithin range of EQ to share damage"
+          }
         },
-        "hp": {}
+        "pala": {
+          "Consumables": {
+            "name": "HP Regen + Mercenary"
+          },
+          "Action": {
+            "name": "Devo SB Stand within 7 cells range to absorb EQ, ensure other frontliners stand whithin same area"
+          }
+        },
+        "dancer": {
+          "Action": {
+            "name": "Songs Of For Volcano then SP + Crit Song"
+          }
+        },
+        "clown": {
+          "Action 1": {
+            "name": "Songs Off For Volcano then Bragi + Battle Drums"
+          },
+          "Armour": {
+            "name": "Anti EQ Gear"
+          },
+          "Action 2": {
+            "name": "At 40% go stand next to devo and give Apple"
+          },
+          "Consumables": {
+            "name": "Mercenary"
+          }
+        },
+        "priest": {
+          "Consumables": {
+            "name": "Mercenary"
+          },
+          "Armour": {
+            "name": "Anti EQ Gear"
+          },
+          "Action 2": {
+            "name": "Pneuma back of SB, or res Devo he can get insta killed"
+          },
+          "Action 3": {
+            "name": "Stand next to Devo To Absorb EQ, Sanctuary"
+          }
+        },
+        "wizard": {},
+        "professor": {
+          "Action 2": {
+            "name": "Volcano On Snipers"
+          },
+          "Consumables": {
+            "name": "Mercenary"
+          },
+          "Armour": {
+            "name": "Anti EQ Gear"
+          },
+          "Action 3": {
+            "name": "At 40% Activate EC, Stand next to Devo and Spell break mvp In case it EQ then move back"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP + Fire"
+          },
+          "Armour": {
+            "name": "Pasana"
+          },
+          "Action 1": {
+            "name": "Sharpshoot / When MVP moves stop attacking let SB reagro"
+          },
+          "Action 2": {
+            "name": "Trap Between Team And MVP, Closer to MVP"
+          },
+          "Consumables": {
+            "name": "Mercenary"
+          }
+        },
+        "creo": {
+          "Consumables": {
+            "name": "Mercenary"
+          }
+        }
       }
     },
     {
       "id": 70,
-      "name": "Level 70",
+      "name": "Level 69",
       "gear": {
-        "sniper": {
-          "element": {
-            "name": "Fire",
-            "color": "#c92606"
-          }
+        "sb": {
+          "Action": null,
+          "Armour": null,
+          "Consumables": null
         },
-        "hp": {}
+        "pala": {
+          "Action": null,
+          "Armour": null,
+          "Consumables": null
+        },
+        "dancer": {
+          "Action": null
+        },
+        "clown": {
+          "Action 1": null,
+          "Action 2": null,
+          "Consumables": null,
+          "Armour": null
+        },
+        "priest": {
+          "Action 1": null,
+          "Action 2": null,
+          "Action 3": null,
+          "Armour": null,
+          "Consumables": null
+        },
+        "wizard": {},
+        "professor": {
+          "Action 2": null,
+          "Consumables": null,
+          "Action 3": null,
+          "Armour": null,
+          "Action 1": null
+        },
+        "sniper": {
+          "Bow And Element": null,
+          "Consumables": null,
+          "Action 2": null,
+          "Action 1": null,
+          "Garment": null,
+          "Armour": null
+        },
+        "creo": {
+          "Consumables": null
+        }
       }
     },
     {
       "id": 71,
-      "name": "Level 71",
+      "name": "Level 70",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 72,
-      "name": "Level 72 - Nidhoggr's Shadow",
+      "name": "Level 71",
       "gear": {
-        "sniper": {
-          "headgear": {
-            "name": "Insomniac"
-          },
-          "bow": {
-            "name": "Dragon Wing",
-            "notes": "or MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Holy",
-            "color": "#fcfcfc"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 73,
-      "name": "Level 73",
+      "name": "Level 72 - Nydhoggr's Shadow",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "BG bow",
-            "notes": "or MVP bow"
+        "sb": {
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Everytime you See MVP Cast Dragon Fear you use it NO MATTER WHAT"
           },
-          "element": null,
-          "headgear": null
+          "Armour": {
+            "name": "Anti Sleep"
+          },
+          "Action": {
+            "name": "Gather MVP Next To Wall"
+          }
         },
-        "hp": {}
+        "pala": {
+          "Consumables": null,
+          "Action": {
+            "name": "Spamm Devo Because MVP Can Dispel"
+          },
+          "Armour": {
+            "name": "Anti Sleep + Anti Stone"
+          }
+        },
+        "dancer": {
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Everytime you See MVP Cast Dragon Fear you use it NO MATTER WHAT"
+          },
+          "Armour": {
+            "name": "Anti Sleep + Anti Stone"
+          }
+        },
+        "clown": {
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Everytime you See MVP Cast Dragon Fear you use it NO MATTER WHAT"
+          },
+          "Action 1": {
+            "name": "Bragi + Battle Drums + Assassin(Optional)",
+            "notes": "Assassin song will be needed if Creo to bomb"
+          },
+          "Armour": {
+            "name": "Anti Sleep + Anti Stone"
+          },
+          "Action 2": {
+            "name": "At 55% flash battle drums in case party is slow to kill"
+          }
+        },
+        "priest": {
+          "Action 2": {
+            "name": "At 50% Lex Spamm Until MVP finishes casting slow spell",
+            "notes": ""
+          },
+          "Action 3": {
+            "name": "FRONT - Safety Wall SB Next To Wall"
+          },
+          "Action 5": {
+            "name": "BACK - Status Recovery Stunned Players"
+          },
+          "Action 4": {
+            "name": "FRONT - Re Assumptio SB because MVP can dispel"
+          },
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Everytime you See MVP Cast Dragon Fear you use it NO MATTER WHAT"
+          },
+          "Armour": {
+            "name": "Anti Sleep + Anti Stone"
+          },
+          "Action 6": {
+            "name": "BACK - Sanctuary On Party"
+          }
+        },
+        "wizard": {
+          "Action": {
+            "name": "Safety Wall SB next to Wall"
+          },
+          "Armour": {
+            "name": "Anti Sleep + Anti Stone"
+          }
+        },
+        "professor": {
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Everytime you See MVP Cast Dragon Fear you use it NO MATTER WHAT"
+          },
+          "Armour": {
+            "name": "Anti Sleep + Anti Stone"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "Any Bow Ask For Aspersio"
+          },
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Everytime you See MVP Cast Dragon Fear you use it NO MATTER WHAT"
+          },
+          "Armour": {
+            "name": "Porcellio + Nightmare(headgear)"
+          }
+        },
+        "creo": {
+          "Action 1": {
+            "name": "If guild allows at 50% Spamm Bomb MVP"
+          },
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Everytime you See MVP Cast Dragon Fear you use it NO MATTER WHAT"
+          },
+          "Action 2": {
+            "name": "Anti Sleep + Anti Stone"
+          }
+        }
       }
     },
     {
       "id": 74,
-      "name": "Level 74 - Bio 3 (FA)",
+      "name": "Level 73",
       "gear": {
-        "sniper": {
-          "arrow": {
-            "name": "Immaterial Arrow"
-          }
+        "sb": {
+          "Consumables": null,
+          "Armour": null,
+          "Action": null
         },
-        "hp": {}
+        "pala": {
+          "Consumables": null,
+          "Armour": null,
+          "Action": null
+        },
+        "dancer": {
+          "Consumables": null,
+          "Armour": null,
+          "Action": null
+        },
+        "clown": {
+          "Consumables": null,
+          "Armour": null,
+          "Action 2": null,
+          "Action 1": null
+        },
+        "priest": {
+          "Consumables": null,
+          "Armour": null,
+          "Action 3": null,
+          "Action 2": null,
+          "Action 1": null,
+          "Action 5": null,
+          "Action 4": null,
+          "Action 6": null
+        },
+        "wizard": {
+          "Consumables": null,
+          "Armour": null,
+          "Action": null
+        },
+        "professor": {
+          "Consumables": null,
+          "Armour": null,
+          "Action 3": null,
+          "Action 2": null,
+          "Action 1": null
+        },
+        "sniper": {
+          "Bow And Element": null,
+          "Armour": null,
+          "Action 1": null,
+          "Action 2": null,
+          "Garment": null,
+          "Consumables": null
+        },
+        "creo": {
+          "Consumables": null,
+          "Action 2": null,
+          "Action 1": null
+        }
       }
     },
     {
       "id": 75,
-      "name": "Level 75 - DG monsters",
+      "name": "Level 74",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Holy",
-            "color": "#fcfcfc"
-          }
-        },
-        "hp": {}
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {},
+        "creo": {}
       }
     },
     {
       "id": 76,
-      "name": "Level 76 - Wounded Satan Morroc",
+      "name": "Level 75",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {},
-        "hp": {}
+        "creo": {}
       }
     },
     {
       "id": 77,
-      "name": "Level 77 - !!!!! DO NOT KILL THE PORING !!!!!",
+      "name": "Level 76 - Wounded Morroc",
       "gear": {
-        "sniper": {
-          "bow": null,
-          "arrow": null,
-          "element": null
+        "sb": {
+          "Action": {
+            "name": "Lure MVP to corner"
+          },
+          "Consumables": {
+            "name": "HP Regen + Panacea",
+            "notes": "Dragon Fear"
+          }
         },
-        "hp": {}
+        "pala": {
+          "Action": {
+            "name": "Devo SB until Debuff is casted"
+          },
+          "Consumables": {
+            "name": "HP Regen + Panacea",
+            "notes": "Dragon Fear"
+          }
+        },
+        "dancer": {},
+        "clown": {
+          "Action 1": {
+            "name": "Bragi + Battle Drum"
+          },
+          "Action 2": {
+            "name": "If Possible Give Bragi To Front Line"
+          }
+        },
+        "priest": {
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Dragon Fear"
+          },
+          "Action 2": {
+            "name": "FRONT Stage 1: Stand Next To Devo Heal/Assumptio/Safety Wall/Pneuma"
+          },
+          "Action 3": {
+            "name": "FRONT Stage 2: Heal Spamm SB",
+            "notes": "At Stage 2 MVP will cast Land Protector So You Can Only Heal"
+          },
+          "Action 4": {
+            "name": "BACK: Sanctuary Party/ Res The Front Liners"
+          }
+        },
+        "wizard": {
+          "Action": {
+            "name": "Safety Wall Spamm Where SB will wall",
+            "notes": "Use Gamba To Remove Land Protector"
+          },
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Dragon Fear"
+          }
+        },
+        "professor": {
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Dragon Fear"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "Any Bow Ask For Aspersio Or Use Holy Arrows",
+            "notes": "Holy Arrows have 5% damage bonus"
+          },
+          "Garment": {
+            "name": "Dragon Tail"
+          },
+          "Action 1": {
+            "name": "Double Strafe"
+          },
+          "Consumables": {
+            "name": "Panacea",
+            "notes": "Dragon Fear"
+          }
+        },
+        "creo": {
+          "Action 1": {
+            "name": "If guild allows at 50% Spamm Bomb MVP"
+          }
+        }
       }
     },
     {
       "id": 78,
-      "name": "Kathryne",
+      "name": "Level 77 (1_1) - Poring",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "BG bow",
-            "notes": "or MVP bow"
+        "sb": {
+          "Action": {
+            "name": "Stand Next To Throne"
           },
-          "arrow": {
-            "name": "Immaterial Arrow"
+          "Armour": null,
+          "Consumables": null
+        },
+        "pala": {
+          "Action": null,
+          "Armour": null,
+          "Consumables": null
+        },
+        "dancer": {},
+        "clown": {
+          "Action 1": {
+            "name": "Bragi/Assassin/Apple to prep for MVP Fight"
+          },
+          "Action 2": null,
+          "Armour": null,
+          "Consumables": null
+        },
+        "priest": {
+          "Consumables": null,
+          "Action 6": null,
+          "Armour": null,
+          "Action 5": null,
+          "Action 4": null,
+          "Action 3": null,
+          "Action 2": null,
+          "Action 1": {
+            "name": "Safety Wall On Trap To Prepare For Next MVP"
           }
         },
-        "hp": {}
+        "wizard": {
+          "Action": null,
+          "Armour": null,
+          "Consumables": null
+        },
+        "professor": {
+          "Consumables": null,
+          "Armour": null,
+          "Action 3": null,
+          "Action 1": {
+            "name": "Land Protector On Party"
+          },
+          "Action 2": null
+        },
+        "sniper": {
+          "Bow And Element": null,
+          "Armour": null,
+          "Garment": null,
+          "Action 1": {
+            "name": "Ignore Poring"
+          },
+          "Action 2": {
+            "name": "Setup Traps LVL3 in front of throne"
+          },
+          "Consumables": null
+        },
+        "creo": {
+          "Action 1": null,
+          "Action 2": null,
+          "Consumables": null
+        }
       }
     },
     {
       "id": 79,
-      "name": "Super Baphomet",
+      "name": "Level 77 (2_1) - Bio Katheryn",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Holy",
-            "color": "#fcfcfc"
+        "sb": {
+          "Action": {
+            "name": "Hit MVP for agro"
           }
         },
-        "hp": {}
+        "pala": {
+          "Action": {
+            "name": "Devo SB"
+          }
+        },
+        "dancer": {},
+        "clown": {
+          "Action 1": {
+            "name": "Bragi/Apple/Assassin"
+          }
+        },
+        "priest": {
+          "Action 1": null,
+          "Action 2": null,
+          "Action 3": null,
+          "Action 4": null,
+          "Action 5": null,
+          "Action 6": null,
+          "Armour": null,
+          "Consumables": null
+        },
+        "wizard": {},
+        "professor": {
+          "Action 1": {
+            "name": "Land Protector On Party"
+          },
+          "Action 2": {
+            "name": "Dispel/Spell Break MVP"
+          },
+          "Action 3": {
+            "name": "SP Snipers"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "MVP/BG Bow + Immaterial arrows"
+          },
+          "Armour": null,
+          "Garment": null,
+          "Action 1": {
+            "name": "DS/SS depending on how safe party feels"
+          },
+          "Consumables": null,
+          "Action 2": {
+            "name": "If stage 1 of bio went well quickly retrap throne"
+          }
+        },
+        "creo": {
+          "Action 1": {
+            "name": "Stand Back Let Snipers Reduce HP",
+            "notes": "Katheryn will change element pay attention when snipers will start missing then bomb time"
+          },
+          "Action 2": {
+            "name": "Bomb When Element Change"
+          }
+        }
       }
     },
     {
       "id": 80,
-      "name": "Wish Maiden x2",
+      "name": "Level 77 (2_2) - Bio Others",
       "gear": {
-        "sniper": {
-          "arrow": {
-            "name": "Immaterial Arrow"
-          },
-          "element": null
+        "sb": {
+          "Action": {
+            "name": "Hit MVP for agro"
+          }
         },
-        "hp": {}
+        "pala": {
+          "Action": {
+            "name": "Devo SB"
+          },
+          "Armour": null,
+          "Consumables": null
+        },
+        "dancer": {},
+        "clown": {
+          "Action 1": {
+            "name": "Bragi/Apple/Assassin"
+          },
+          "Action 2": null,
+          "Armour": null,
+          "Consumables": null
+        },
+        "priest": {
+          "Action 1": {
+            "name": "Lex Spamm MVP"
+          },
+          "Action 2": {
+            "name": "If After Stage 1 Bio Safety wall on traps again"
+          }
+        },
+        "wizard": {},
+        "professor": {
+          "Action 1": {
+            "name": "Dispel/Spell Break MVP"
+          },
+          "Action 3": null,
+          "Armour": null,
+          "Consumables": null,
+          "Action 2": {
+            "name": "If after Stage 1 Bio, SP the creo"
+          }
+        },
+        "sniper": {
+          "Bow And Element": {
+            "name": "Spamm Detect"
+          },
+          "Armour": null,
+          "Action 1": {
+            "name": "If stage 1 of bio went well quickly retrap throne"
+          },
+          "Consumables": null,
+          "Garment": null,
+          "Action 2": null
+        },
+        "creo": {
+          "Action 1": {
+            "name": "Bomb Non Stop MVP"
+          },
+          "Action 2": null,
+          "Consumables": null
+        }
       }
     },
     {
       "id": 81,
-      "name": "Piamette",
+      "name": "Level 77 (3_1) - Bapho",
       "gear": {
-        "sniper": {
-          "bow": {
-            "name": "BG bow",
-            "notes": "or MVP bow"
-          },
-          "arrow": {
-            "name": "Oridecon Arrow"
-          },
-          "element": {
-            "name": "Fire",
-            "color": "#c92606"
-          },
-          "armor": {
-            "name": "Pasana"
-          }
+        "sb": {
+          "Consumables": null,
+          "Armour": null,
+          "Action": null
         },
-        "hp": {}
+        "pala": {
+          "Action": null,
+          "Consumables": null,
+          "Armour": null
+        },
+        "dancer": {},
+        "clown": {
+          "Action 1": null,
+          "Consumables": null,
+          "Armour": null,
+          "Action 2": null
+        },
+        "priest": {
+          "Consumables": null,
+          "Armour": null,
+          "Action 6": null,
+          "Action 5": null,
+          "Action 4": null,
+          "Action 3": null,
+          "Action 2": null,
+          "Action 1": null
+        },
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": {
+            "name": "Any Bow Ask For Aspersio"
+          },
+          "Armour": null,
+          "Garment": null,
+          "Action 1": {
+            "name": "Stand In Pneuma"
+          },
+          "Action 2": {
+            "name": "SharpShoot/DS"
+          },
+          "Consumables": null
+        },
+        "creo": {
+          "Consumables": null,
+          "Action 2": null,
+          "Action 1": null
+        }
       }
     },
     {
       "id": 82,
-      "name": "Pori Pori",
+      "name": "Level 77 (3_2) - Flamette x 2",
       "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
         "sniper": {
-          "bow": {
-            "name": "MVP bow",
-            "notes": "or Pori Pori bow"
+          "Consumables": {
+            "name": "Green Potion"
+          },
+          "Action 2": {
+            "name": "SharpShoot"
+          },
+          "Action 1": {
+            "name": "Stand In Pneuma"
+          },
+          "Garment": null,
+          "Armour": null,
+          "Bow And Element": {
+            "name": "MVP Bow + Fire"
           }
         },
-        "hp": {}
+        "creo": {}
+      }
+    },
+    {
+      "id": 83,
+      "name": "Level 77 (3_3) - Wish Maiden x 2",
+      "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Consumables": null,
+          "Action 2": {
+            "name": "Sharp Shoot MVP"
+          },
+          "Action 1": {
+            "name": "Trap Kill Ads with Falcon Assault"
+          },
+          "Garment": null,
+          "Armour": null,
+          "Bow And Element": {
+            "name": "MVP + Immaterial"
+          }
+        },
+        "creo": {}
+      }
+    },
+    {
+      "id": 84,
+      "name": "Level 77 (4_1) - Pori Pori",
+      "gear": {
+        "sb": {},
+        "pala": {},
+        "dancer": {},
+        "clown": {},
+        "priest": {},
+        "wizard": {},
+        "professor": {},
+        "sniper": {
+          "Bow And Element": {
+            "name": "Any Bow + Fire"
+          },
+          "Armour": null,
+          "Garment": null,
+          "Action 1": null,
+          "Action 2": null,
+          "Consumables": null
+        },
+        "creo": {}
       }
     }
   ]
